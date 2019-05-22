@@ -1,0 +1,68 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+	int province, day;
+	int temperatureA[7];
+	int temperatureB[7];
+	int temperatureC[7];
+	char provinceA [3] = "A";
+	char provinceB [3] = "B";
+	char provinceC [3] = "C";
+	
+	cout << "Good Day! This Program will show The Corresponding Temperature for Province A, B, and C." << endl;
+	cout << "Enter The Corresponding Temperature for Province A, B, and C." << endl;
+	
+
+		for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceA << ", Day " << day + 1 << " : ";
+            cin >> temperatureA[day];
+        }
+	
+	
+		for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceB << ", Day " << day + 1 << " : ";
+            cin >> temperatureB[day];
+        }
+
+		for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceC << ", Day " << day + 1 << " : ";
+            cin >> temperatureC[day];
+        }
+	
+    
+    
+	cout << "\nTemperature of Province A, Province B and Province C for a Week:\n";
+
+  
+    for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceA << ", Day " << day + 1 << " : " << temperatureA[day] << endl;
+           
+        }
+        
+    for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceB << ", Day " << day + 1 << " : " << temperatureB[day] << endl;
+           
+        }
+        
+    for(int day = 0; day < 7; day++)
+        {
+            cout << "Province " << provinceC << ", Day " << day + 1 << " : " << temperatureC[day] << endl;
+           
+        }
+    
+	
+	
+	
+	_getch();
+	return 0;
+	
+}
