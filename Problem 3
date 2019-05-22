@@ -1,0 +1,82 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+	
+	
+	int num, size, value, integer, words, sizeA,  numA, result;
+	int numbers[100];
+	char text[101];
+	
+	cout << "Good Day! This Program will help you sort integers and characters in systematic order." << endl;
+	cout << "Enter the Array Size:";
+	cin >> size;	
+	cout << "Enter Integers:";
+	
+	for (integer = 0; integer < size; integer++)
+	{
+		cin >> numbers[integer];
+	}
+	
+	
+	for (integer = 0; integer < size; integer++)
+	{
+		for(num = integer + 1; num < size; num++)
+		{
+			if(numbers[integer] > numbers[num])
+			{
+				value = numbers[integer];
+				numbers[integer] = numbers[num];
+				numbers[num] = value;
+			}
+		}
+	}
+	
+	cout << "Enter the Character Size:";
+	cin >> sizeA;
+	cout << "Encode Characters:";
+	
+	for (words = 0; words < sizeA; words++)
+	{
+		cin >> text[words];
+	}
+	
+	
+	for (words = 0; words < sizeA; words++)
+	{
+		for(numA = words + 1; numA < sizeA; numA++)
+		{
+			if(text[words] > text[numA])
+			{
+				result = text[words];
+				text[words] = text[numA];
+				text[numA] = result;
+			}
+		}
+	}
+	
+	
+	
+	cout << "The Resulting Arrangement of Integers:\n";
+	for(integer = 0; integer < size; integer++)
+	{
+		cout << numbers[integer] << ' ';
+	}
+	
+	cout << "\nThe Resulting Arrangement of Characters:\n";
+	for (words = 0; words < sizeA; words++)
+	{
+		cout << text[words] << ' ';
+	}
+	
+	
+	
+	
+	
+	_getch();
+	return 0;
+	
+}
